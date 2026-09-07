@@ -37,7 +37,7 @@ int main() {
         } else if (choice == 2) {
             if (teamCount < 10) {
                 printf("Enter new team name: ");
-                scanf(" %[^\n]", teams[teamCount]);
+                scanf(" %s\n", teams[teamCount]);
                 teamCount++;
                 printf("Team added!\n");
             } else {

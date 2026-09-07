@@ -3,13 +3,65 @@
   print 'Team not found!'
   
   #include<stdio.h>
+  int main()
+   {
+        int team;
+        
+        printf("Enter Your Fav. Team : \n 1)  Mumbai Indians \n 2) Gujrat Titans \n 3) Chennai Super Kings \n");
+        scanf("%d",&team);
+
+        if(team==1)
+        {
+            printf("Go Mumbai Indians !");
+        }
+         else if(team==2)
+        {
+            printf("Gujarat Titans for the win!");
+        }
+         else if(team==3)
+        {
+            printf("Go chennai super kings !");
+        }
+        else
+        {
+            printf("Sorry team name not found");
+        }
+        return 0;
+   }
   
 2.Build a Zomato-style food suggestion tool: take the user's preferred meal time ('breakfast', 'lunch', 'dinner', or 'snack') 
   and use a switch-case statement to suggest a popular dish for that time. If the input doesn't match any meal, suggest 'Try some fruits!'.
   
-  
-  
-  
+ #include <stdio.h>
+
+int main() {
+    
+    int choice;
+
+    printf("Enter your meal time \n 1) breakfast \n 2) lunch \n 3) dinner \n 4) snack \n");
+    scanf("%d", &choice);
+
+    switch (choice) 
+    {
+        case 1:
+            printf("Try Fafda & Jalebi!\n");
+            break;
+        case 2:
+            printf("Try Gujrati Thali!\n");
+            break;
+        case 3:
+            printf("Try Paneer Tikka!\n");
+            break;
+        case 4:
+            printf("Try Samosa or Pakora!\n");
+            break;
+        default:
+            printf("Try some fruits!\n");
+    }
+
+    return 0;
+}
+
 3.Create a Flipkart discount calculator that asks the user for the total cart amount. Use nested if statements to check: 
 if amount > 2000, apply 20% discount; else if amount > 1000, apply 10% discount; else, no discount. Print the final amount to pay.
 <br><br><em><strong>Hint:</strong> Use nested ifs to check each discount slab.</em>
@@ -23,12 +75,12 @@ if amount > 2000, apply 20% discount; else if amount > 1000, apply 10% discount;
     scanf("%f", &amount);
 
     if (amount > 2000) {
-        discount = amount * 0.20;
+        discount = amount * 20/100;
         finalamount = amount - discount;
         printf("20%% discount applied.\n");
     } else {
         if (amount > 1000) {
-            discount = amount * 0.10;
+            discount = amount * 10/100;
             finalamount = amount - discount;
             printf("10%% discount applied.\n");
         } else {
@@ -60,15 +112,24 @@ if amount > 2000, apply 20% discount; else if amount > 1000, apply 10% discount;
     if (age >= 18) 
 	{
         printf("Eligible for Driving License\n");
-    }
+    }else
+    {
+        printf("Not Eligible for Driving License");
+	}
 
     if (age >= 21) {
         printf("Eligible for Credit Card\n");
-    }
+    }  else
+       {
+           printf("Not Eligible for Credit Card\n");
+       }
 
     if (age >= 25) {
         printf("Eligible for Car Rental\n");
-    }
+    }  else
+       {
+           printf("Not Eligible for Car Rental\n");
+       }
 
     if (age < 18) {
         printf("Not eligible for any of the above yet.\n");

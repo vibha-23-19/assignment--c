@@ -19,9 +19,9 @@
   #include <stdio.h>
 
    int main() {
-    const float gstrate = 0.18;  
+    const float gstrate = 18;  
     float basePrice = 500.0;
-    float finalPrice = basePrice + (basePrice * gstrate);
+    float finalPrice = basePrice + (basePrice * gstrate)/100;
 
     printf("Base Price: %.2f\n", basePrice);
     printf("GST Amount: %.2f\n", basePrice * gstrate);
@@ -37,8 +37,8 @@
 
     int main() {
     char playlistname[50] = "Chill Vibes";
-    int totalsongs = 25;
-    float avgduration = 3.5;
+    int totalsongs = 30;
+    float avgduration = 5.5;
 
     printf("My Playlist \"%s\" has %d songs with an average duration of %.1f minutes each.\n",
            playlistname, totalsongs, avgduration);
