@@ -1,0 +1,62 @@
+1.Declare variables for a Flipkart product: productName (as a string), price (float), and rating (double). 
+  Assign sample values and print each variable with its data type.
+  #include<stdio.h>
+  int main()
+  {
+      char product[50] ="Laptop";
+	  float price = 49999.99;
+	  double rating = 3.5;
+	  
+	  printf("product Name (string) ->  %s\n",product);
+	  printf("price (float) -> %f\n",price);
+	  printf("rating (double) -> %lf\n",rating);
+	  return 0;
+  }
+  
+2.Create a constant variable to store the GST rate (for example, 18%) and use it to calculate 
+  the final price of a Zomato order with a given base price.
+  
+  #include <stdio.h>
+
+   int main() {
+    const float gstrate = 0.18;  
+    float basePrice = 500.0;
+    float finalPrice = basePrice + (basePrice * gstrate);
+
+    printf("Base Price: %.2f\n", basePrice);
+    printf("GST Amount: %.2f\n", basePrice * gstrate);
+    printf("Final Price with GST -> %.2f\n", finalPrice);
+
+    return 0;
+}
+  
+3.Write a program that stores your favorite Spotify playlist's name (string), total number of songs (int), 
+  and average song duration in minutes (float). Print all values in a single formatted sentence.
+   
+   #include <stdio.h>
+
+    int main() {
+    char playlistname[50] = "Chill Vibes";
+    int totalsongs = 25;
+    float avgduration = 3.5;
+
+    printf("My Playlist \"%s\" has %d songs with an average duration of %.1f minutes each.\n",
+           playlistname, totalsongs, avgduration);
+
+    return 0;
+}
+  
+4.Identify and correct the invalid variable names from this list: 1stPlayer, player_age, $score, total-marks, userName.
+
+  1) 1stPlayer   -> invalid variable (start with digit)
+                   corrected -> firstPlayer
+				   
+  2) player_age  -> valid variable
+  
+  3) $score      -> invalid variable (starts with a special character)
+                    corrected -> score
+					
+  4) total-marks -> invalid variable
+                    corrected -> total_marks
+  
+  5) userName    -> valid variable

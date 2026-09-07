@@ -1,0 +1,78 @@
+1.Create a simple IPL Fan Bot that takes your favorite IPL team name as input and uses if-else-if statements to print a unique 
+  cheer message for each team (e.g., 'Go Mumbai Indians!', 'Chennai Super Kings for the win!'). If the team is not recognized, 
+  print 'Team not found!'
+  
+  #include<stdio.h>
+  
+2.Build a Zomato-style food suggestion tool: take the user's preferred meal time ('breakfast', 'lunch', 'dinner', or 'snack') 
+  and use a switch-case statement to suggest a popular dish for that time. If the input doesn't match any meal, suggest 'Try some fruits!'.
+  
+  
+  
+  
+3.Create a Flipkart discount calculator that asks the user for the total cart amount. Use nested if statements to check: 
+if amount > 2000, apply 20% discount; else if amount > 1000, apply 10% discount; else, no discount. Print the final amount to pay.
+<br><br><em><strong>Hint:</strong> Use nested ifs to check each discount slab.</em>
+ 
+ #include <stdio.h>
+
+ int main() {
+    float amount, discount, finalamount;
+
+    printf("Enter total cart amount: ");
+    scanf("%f", &amount);
+
+    if (amount > 2000) {
+        discount = amount * 0.20;
+        finalamount = amount - discount;
+        printf("20%% discount applied.\n");
+    } else {
+        if (amount > 1000) {
+            discount = amount * 0.10;
+            finalamount = amount - discount;
+            printf("10%% discount applied.\n");
+        } else {
+            discount = 0;
+            finalamount = amount;
+            printf("No discount applied.\n");
+        }
+    }
+
+    printf("Discount amount: %.2f\n", discount);
+    printf("Final amount to pay: %.2f\n", finalamount);
+
+    return 0;
+}
+
+4.Write a program that takes a user's age and checks eligibility for three things using if-else statements:
+  if age >= 18, print 'Eligible for Driving License'; if age >= 21, also print 'Eligible for Credit Card'; 
+  if age >= 25, also print 'Eligible for Car Rental'. Print all applicable messages for the given age
+  
+  #include <stdio.h>
+
+ int main()
+ {
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >= 18) 
+	{
+        printf("Eligible for Driving License\n");
+    }
+
+    if (age >= 21) {
+        printf("Eligible for Credit Card\n");
+    }
+
+    if (age >= 25) {
+        printf("Eligible for Car Rental\n");
+    }
+
+    if (age < 18) {
+        printf("Not eligible for any of the above yet.\n");
+    }
+
+    return 0;
+}

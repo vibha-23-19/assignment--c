@@ -1,0 +1,29 @@
+1.Install GCC on your computer and verify the installation by running gcc --version in your terminal or command prompt.
+
+   gcc --version 
+   gcc.exe (MinGW.org GCC-6.3.0-1) 6.3.0
+
+2.Open VS Code or DevC++ and create a new file named hello.c. Write a C program that prints 'Hello, Instagram World!' to the console.
+  
+  #include<stdio.h>
+   int main()
+   {
+     printf(" Hello, Instagram World !\n");
+	 return 0;
+   }
+
+3.Identify and label the header, main function, and return statement in your hello.c program using comments.
+
+  #include<stdio.h> // header file
+   int main() // main function
+   {
+     printf(" Hello, Instagram World !\n");
+	 return 0; // return statement
+   }
+
+4.Compile your hello.c file using the GCC command line (gcc hello.c -o hello) and run the output file to display 
+the message in your terminal.On Windows, the output file will be hello.exe; on Linux/Mac, it will be hello.
+   
+   PS E:\vibha\assignment -C> gcc hello.c -o hello
+   PS E:\vibha\assignment -C> .\hello.exe
+  output: Hello, Instagram World !

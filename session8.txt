@@ -1,0 +1,43 @@
+1.Declare a function called getUserInitials that takes a user's full name (like 'Virat Kohli') and returns their initials in uppercase
+ (e.g., 'VK'). Call this function with your favorite cricketer's name and print the result.
+ 
+2.Create a function addToCart that takes a shopping cart array and a product name, adds the product to the cart, and prints the updated 
+  cart. Demonstrate how passing the cart array by reference allows changes to persist outside the function.<br><br><em>
+  <strong>Hint:</strong> In languages like JavaScript, arrays are passed by reference. In C/C++, use pointers for reference behavior.</em>
+  
+  #include<stdio.h>
+  #include<string.h>
+
+void insert_item(char arr[][50],int index, char product[])
+{
+    strcpy(arr[index],product);
+}
+
+
+int main()
+{
+     char arr[10][50]={
+          "laptop",
+          "bag",
+          "mouse",
+          "keyboard"
+     };
+    char product_name[] ="monitor";
+    insert_item(arr, 4 ,product_name);
+
+    for (int i=0; i<=4; i++){
+         printf("%s\n",arr[i]);
+    }
+     return 0;
+}
+  
+3.Write two functions: increaseFollowersByValue and increaseFollowersByReference. Each should take a followers count and add 1000 to it,
+ but one should use pass-by-value and the other pass-by-reference. Show how the original followers count changes (or doesn't) after 
+ calling each function.
+ 
+4.Build a function formatPrice that takes a price in rupees and returns a string formatted like Flipkart's 
+  price tag (e.g., '₹1,599'). Use this function to display prices for three different products.
+  
+5.Refactor an existing function you wrote above to make it reusable for both product names and usernames (for example, a function that
+  capitalizes the first letter of any string).<br><br><em><strong>Constraint:</strong> The refactored function should work for any string 
+  input, not just a specific use case.</em>

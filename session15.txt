@@ -1,0 +1,11 @@
+Tasks
+1.
+Create a console-based app called Music Listening Logger that allows users to enter the number of minutes they listened to music each day for a week and stores this data in an array.
+2.
+Add a menu-driven interface to your Music Listening Logger so users can choose to log new listening minutes, view their weekly summary, or exit the app.<br><br><em><strong>Hint:</strong> Use a loop to repeatedly show the menu until the user selects exit.</em>
+3.
+Implement file handling in your Music Listening Logger so that when the user logs their daily listening minutes, the data is saved to a file named music_log.txt for persistence.
+4.
+Add a feature to your app that reads the saved music_log.txt file and generates a weekly report showing the total, average, and highest listening minutes in the week.
+5.
+Refactor your Music Listening Logger to allow users to reset their weekly data by clearing the array and deleting the contents of music_log.txt.<br><br><em><strong>Constraint:</strong> Make sure the reset option is available in the menu and asks for confirmation before deleting data.</em>

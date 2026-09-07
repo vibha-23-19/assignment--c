@@ -1,0 +1,133 @@
+1.Create a simple JavaScript function called calculateTotal that takes two numbers: itemPrice and quantity, 
+  and returns the total bill amount using arithmetic operators.
+  
+  #include <stdio.h>
+
+float calculatetotal(float itemPrice, int quantity) 
+{
+    return itemPrice * quantity;
+}
+
+int main() 
+{
+    float total = calculatetotal(250.0, 3);
+    printf("Total bill amount: %.2f\n", total);
+    return 0;
+}
+  
+2.Build a Flipkart-style discount calculator: given product price, discount percentage, and a boolean isMember, 
+  use arithmetic and logical operators to calculate the final price (apply an extra 5% off if isMember is true).
+  
+  #include <stdio.h>
+
+   float calculateprice(float price, float discountpercent, int ismember) {
+    float discount = price * (discountpercent / 100);
+    float afterdiscount = price - discount;
+
+    if (ismember) {
+        afterdiscount = afterdiscount - (afterdiscount * 0.05);
+    }
+
+    return afterdiscount;
+}
+
+int main() {
+    printf("Final price for member ->  %.2f\n", calculateprice(1000, 10, 1));  
+    printf("Final price for non-member -> %.2f\n", calculateprice(1000, 10, 0)); 
+    return 0;
+}
+  
+  
+3.Write a function isEligibleForOffer that takes a user's age and total order value, and returns true if the user 
+  is 18 or older AND the order value is above 500, otherwise false.
+  
+  #include <stdio.h>
+
+  int iseligible(int age, float orderValue) 
+  {
+    if (age >= 18 && orderValue > 500) {
+        return 1;
+    }else {
+        return 0;
+    }
+ }
+
+  int main() {
+    int age[] = {20, 16, 20};
+    float order[] = {600, 600, 400};
+
+    for (int i = 0; i < 3; i++) {
+        int result = iseligible(age[i], order[i]);
+
+        if (result == 1) {
+            printf("Eligible for order     -> %d\n", result);
+        } else {
+            printf("Not Eligible for order -> %d\n", result);
+        }
+    }
+
+    return 0;
+}
+   
+  
+4.Given three variables: likes, comments, and shares (all numbers), write code to check if a post is 'trending'
+  on Instagram (at least 1000 likes OR more than 200 comments AND at least 50 shares). Print the result.
+  
+  #include <stdio.h>
+
+  int trending(int likes, int comments, int shares) 
+  {
+    if (likes >= 1000 || (comments > 200 && shares >= 50)) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+  int main() 
+  {
+    int likes[]    = {1200, 500, 300};
+    int comments[] = {250, 150, 250};
+    int shares[]   = {60, 30, 40};
+
+    for (int i = 0; i < 3; i++) {
+        int result = trending(likes[i], comments[i], shares[i]);
+
+        if (result == 1) {
+            printf("Post %d is trending      -> %d\n", i + 1, result);
+        } else {
+            printf("Post %d is not trending  -> %d\n", i + 1, result);
+        }
+    }
+
+    return 0;
+}
+  
+5.Write a code snippet that demonstrates the difference between pre-increment (++count) and post-increment (count++)
+  by logging the values before and after using both on a followerCount variable.
+
+  #include <stdio.h>
+
+  int main() 
+  {
+    int followerCount = 100;
+
+    printf("Initial followerCount -> %d\n", followerCount);
+
+    for (int i = 0; i < 2; i++) {
+        int value;
+
+        if (i == 0) {
+            value = followerCount++;   
+            printf("Post-increment (count++) -> %d\n", value);
+        } else {
+            value = ++followerCount;
+            printf("Pre-increment (++count)  -> %d\n", value);
+        }
+
+        printf("followerCount after step %d -> %d\n", i + 1, followerCount);
+    }
+
+    return 0;
+}  
+  

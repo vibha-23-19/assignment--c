@@ -1,0 +1,74 @@
+1.Write a short paragraph in your own words defining what a 'program' is and give
+ one real-life example from any app you use daily (like Instagram, Zomato, or Paytm).
+ 
+ A program is a set of step-by-step instructions written by a programmer in a language that a
+ computer can understand and execute, in order to perform a specific task. These instructions tell 
+ the computer exactly what actions to take and in what order. 
+ 
+ A real-life example is Instagram it follows instructions to let users create accounts, upload photos and videos, 
+ scroll through a feed, like and comment on posts,and send direct messages to other users.
+
+2.List three popular programming languages you have heard of, and for each, mention whether
+ it is usually compiled, interpreted, or can be both.<br><br><em><strong>Hint:</strong> Think
+ of languages like Java, Python, and JavaScript.</em>
+-------------------------------------------- 
+ languages           |   Type              | 
+ -------------------------------------------
+ 1. Java             |   Both	           |
+ 2. Python           |   Interpreted       |
+ 3. Javascript       |   Interpreted       |
+--------------------------------------------
+ 
+3.Draw a flowchart (on paper or using any online tool) for the process of booking a movie ticket on BookMyShow, 
+ starting from opening the app to receiving the booking confirmation.
+   
+   start
+     |
+   Open BookMyShow
+     |
+   Select city
+     |
+   Choose a movie
+     |
+   Select cinema & showtime
+     |
+   Choose seats
+     |
+   Seats avaliable?
+     |yes
+   Process to payment page
+     |
+   Enter payment details & pay
+     |
+   Paytment successfull?
+     |yes
+   Recevice booking Confimation
+     |
+    End	 
+ 
+4.Write down the steps (as an algorithm, using simple numbered instructions) for ordering food on Swiggy —
+  from opening the app to completing payment.
+  
+1) Open the Swiggy app
+                
+2) Enter or confirm the delivery location 
+              
+3) Browse restaurants or search for a specific one 
+
+4) Select a restaurant 
+
+5) Choose food items and add them to the cart 
+
+6) Review the cart (check items, quantity, and price) 
+
+7) Apply a coupon or offer, if available 
+
+8) Proceed to checkout 
+
+9) Select or confirm the delivery address 
+
+10) Choose a payment method (UPI, card, cash on delivery, etc.) 
+
+11) Complete the payment 
+
+12) Receive order confirmation

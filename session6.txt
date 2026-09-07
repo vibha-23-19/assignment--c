@@ -1,0 +1,90 @@
+1.Write a program that prints the numbers from 10 down to 1 using a for loop, similar to a countdown timer.
+
+#include <stdio.h>
+int main() 
+{
+    for (int i = 10; i >= 1; i--) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
+
+2.Create a menu-driven console app that lets the user: 1) View your favorite 3 IPL teams, 2) Add a new team, 3) Exit.
+ Use a while loop to keep showing the menu until the user chooses Exit.
+<br><br><em><strong>Hint:</strong> Use input() (or Scanner in Java) to get the user's choice each time.</em>
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char teams[10][50] = {"Mumbai Indians", "Chennai Super Kings", "Royal Challengers Bangalore"};
+    int teamCount = 3;
+    int choice;
+
+    while (1) {
+        printf("\n--- MENU ---\n");
+        printf("1) View favorite IPL teams\n");
+        printf("2) Add a new team\n");
+        printf("3) Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            printf("\nYour favorite IPL teams:\n");
+            for (int i = 0; i < teamCount; i++) {
+                printf("%d. %s\n", i + 1, teams[i]);
+            }
+        } else if (choice == 2) {
+            if (teamCount < 10) {
+                printf("Enter new team name: ");
+                scanf(" %[^\n]", teams[teamCount]);
+                teamCount++;
+                printf("Team added!\n");
+            } else {
+                printf("Team list is full!\n");
+            }
+        } else if (choice == 3) {
+            printf("Exit!\n");
+            break;
+        } else {
+            printf("Invalid choice, try again.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+3.Build a 'Guess the Song' game like Spotify — the program randomly picks a song name from a list and asks the user to guess it. 
+Use a do-while loop so the user can keep guessing until they get it right.
+<br><br><em><strong>Constraint:</strong> Use at least 3 song names of your choice.</em>
+
+4.Explain with your own example the difference between entry-controlled and exit-controlled loops by writing a short code snippet 
+for each (for/while vs do-while) and describing what happens if the loop condition is false at the start
+ 
+entry-controlled loop -> (for/while) checks the condition before running the loop body. 
+                         If the condition is false at the start, the body never executes at all.
+
+exit-controlled  loop -> (do-while)checks the condition after running the loop body. This guarantees the body runs at least once, 
+                          even if the condition is false from the very beginning.
+
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+
+    // Entry-controlled loop (while)
+    printf("While loop (entry-controlled):\n");
+    while (a < 5) {
+        printf("This will never print.\n");
+    }
+    printf("Loop skipped because condition (x < 5) was false at start.\n\n");
+
+    // Exit-controlled loop (do-while)
+    printf("Do-while loop (exit-controlled):\n");
+    do {
+        printf("This prints once, even though x < 5 is false.\n");
+    } while (a < 5);
+
+    return 0;
+}
