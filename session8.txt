@@ -35,9 +35,88 @@ int main()
  but one should use pass-by-value and the other pass-by-reference. Show how the original followers count changes (or doesn't) after 
  calling each function.
  
+#include <stdio.h>
+
+
+void increaseFollowersByValue(int followers)
+{
+    followers = followers + 1000;
+    printf("Inside value function: %d\n", followers);
+}
+
+// Pass-by-reference using pointer
+void increaseFollowersByReference(int *followers)
+{
+    *followers = *followers + 1000;
+    printf("Inside reference function: %d\n", *followers);
+}
+
+int main()
+{
+    int followers = 1500;
+
+    printf("Original followers: %d\n\n", followers);
+
+    increaseFollowersByValue(followers);
+    printf("After pass-by-value: %d\n\n", followers);
+
+    increaseFollowersByReference(&followers);
+    printf("After pass-by-reference: %d\n", followers);
+
+    return 0;
+}
+ 
 4.Build a function formatPrice that takes a price in rupees and returns a string formatted like Flipkart's 
   price tag (e.g., '₹1,599'). Use this function to display prices for three different products.
+  
+#include <stdio.h>
+
+char* formatPrice(int price)
+{
+    static char result[20];
+
+    sprintf(result, "₹ %d", price);
+
+    return result;
+}
+
+int main()
+{
+    int price1 = 1599;
+    int price2 = 2499;
+    int price3 = 799;
+
+    printf("Price of Product 1 : %s\n", formatPrice(price1));
+    printf("Price of Product 2 : %s\n", formatPrice(price2));
+    printf("Price of Product 3 : %s\n", formatPrice(price3));
+
+    return 0;
+}
   
 5.Refactor an existing function you wrote above to make it reusable for both product names and usernames (for example, a function that
   capitalizes the first letter of any string).<br><br><em><strong>Constraint:</strong> The refactored function should work for any string 
   input, not just a specific use case.</em>
+
+#include <stdio.h>
+
+void capitalizeFirst(char str[])
+{
+    if (str[0] >= 'a' && str[0] <= 'z')
+    {
+        str[0] = str[0] - 32;
+    }
+}
+
+int main()
+{
+    char product[] = "Buds";
+    char username[] = "Vibha";
+
+    capitalizeFirst(product);
+    capitalizeFirst(username);
+
+    printf("Product Name: %s\n", product);
+    printf("Username: %s\n", username);
+
+    return 0;
+}

@@ -1,9 +1,97 @@
-Tasks
-1.
-Create a file called playlist.txt and write the names of your top 3 favorite songs from Spotify into it using write mode (w).
-2.
-Open playlist.txt in read mode (r) and display each song name on a separate line in the console.
-3.
-Add two more song names to playlist.txt without deleting the existing ones by opening the file in append mode (a).
-4.
-Write a program that reads all song names from playlist.txt and prints only those that contain the word 'love' (case-insensitive).<br><br><em><strong>Hint:</strong> Use the 'in' keyword or equivalent string method for filtering.</em>
+1.Create a file called playlist.txt and write the names of your top 3 favorite songs from Spotify into it using write mode (w).
+ #include <stdio.h>
+
+ int main()
+ {
+    FILE *file;
+
+    file = fopen("playlist.txt", "w");
+
+    fprintf(file, "Dhun Lagi\n");
+    fprintf(file, "Saiyara\n");
+    fprintf(file, "Mane Malje\n");
+
+    fclose(file);
+
+    printf("3 songs written to playlist.txt\n");
+
+    return 0;
+ }
+
+2.Open playlist.txt in read mode (r) and display each song name on a separate line in the console.
+
+#include <stdio.h>
+
+int main()
+{
+    FILE *file;
+    char song[50];
+
+    file = fopen("playlist.txt", "r");
+
+    while(fgets(song, 50, file) != NULL)
+    {
+        printf("%s", song);
+    }
+
+    fclose(file);
+
+    return 0;
+}
+
+3.Add two more song names to playlist.txt without deleting the existing ones by opening the file in append mode (a).
+#include <stdio.h>
+
+int main()
+{
+    FILE *file;
+
+    file = fopen("playlist.txt", "a");
+
+    fprintf(file, "Valam Aavo Ne\n");
+    fprintf(file, "Kesariya\n");
+
+    fclose(file);
+
+    printf("2 more songs added.\n");
+
+    return 0;
+}
+
+4.Write a program that reads all song names from playlist.txt and prints only those that contain the word 'love' 
+(case-insensitive).<br><br><em><strong>Hint:</strong> Use the 'in' keyword or equivalent string method for filtering.</em>
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    FILE *file;
+    char song[50];
+    char lower[50];
+
+    file = fopen("playlist.txt", "r");
+
+    while(fgets(song, 500, file) != NULL)
+    {
+        strcpy(lower, song);
+
+
+        for(int i = 0; lower[i] != '\0'; i++)
+        {
+            if(lower[i] >= 'A' && lower[i] <= 'Z')
+            {
+                lower[i] = lower[i] + 32;
+            }
+        }
+
+       
+        if(strstr(lower, "love") != NULL)
+        {
+            printf("%s", song);
+        }
+    }
+
+    fclose(file);
+
+    return 0;
+}

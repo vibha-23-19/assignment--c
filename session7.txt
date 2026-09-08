@@ -4,7 +4,7 @@
 int main() {
     for (int i = 1; i <= 5; i++) {
         for (int j = 1; j <= 5; j++) {
-            printf("*");
+            printf("📷 ");
         }
         printf("\n");
     }
@@ -13,13 +13,14 @@ int main() {
 
 2.Build a right-angled triangle pattern using nested loops, where each row displays increasing numbers starting from 1, 
   similar to how a leaderboard on a gaming app shows rank numbers.
-  #include <stdio.h>
+  
+#include <stdio.h>
 
 int main() {
-    int rows = 5;
+    int i ,j;
 
-    for (int i = 1; i <= rows; i++) {
-        for (int j = 1; j <= i; j++) {
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
             printf("%d ", j);
         }
         printf("\n");
@@ -33,17 +34,17 @@ int main() {
   #include <stdio.h>
 
   int main() {
-    int rows = 6;
+    
 
-    for (int i = 1; i <= rows; i++) 
+    for (int i = 1; i <= 6; i++) 
 	{
-        for (int j = 1; j <= rows - i; j++) 
+        for (int space = 1; space <= 6 - i; space++) 
 		{
-            printf(" ");
+            printf("  ");
         }
-        for (int k = 1; k <= (2 * i - 1); k++) 
+        for (int j = 1; j <=i; j++) 
 		{
-            printf("*");
+            printf("* ");
         }
         printf("\n");
     }
@@ -55,11 +56,10 @@ int main() {
   playlist covers (e.g., for a 4x4 grid, alternate 0 and 1 in each cell).
   #include <stdio.h>
 
-int main() {
-    int rows = 4, column = 4;
-
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < column; j++) {
+int main() 
+{
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
             if ((i + j) % 2 == 0) {
                 printf("0 ");
             } else {

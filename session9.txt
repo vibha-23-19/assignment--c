@@ -1,9 +1,104 @@
-Tasks
-1.
-Declare a 1D array called dailySteps with 7 elements to store your step count for each day of the week, assign sample values, and print each value using a loop.
-2.
-Create a 2D array called playlistRatings to store ratings for 3 Spotify playlists over 5 days (rows = playlists, columns = days). Fill it with sample numbers and print the ratings for the second playlist.
-3.
-Build a function that takes a 1D array of 7 integers representing your daily Zomato order amounts and calculates the average spend for the week.<br><br><em><strong>Hint:</strong> Use a loop to sum the values, then divide by the array length.</em>
-4.
-Given a 2D array called cricketScores where each row represents an IPL match and columns represent runs scored by each team, write code to print the highest score from each match.
+1.Declare a 1D array called dailySteps with 7 elements to store your step count for each day of the week, 
+assign sample values, and print each value using a loop.
+#include<stdio.h>
+
+int main()
+{
+    
+    int dailySteps[7];
+
+    for(int i=0;i<7;i++)
+    {  
+        printf("\n Enter step of a day %d: ",i+1);
+        scanf("%d",&dailySteps[i]);
+    }
+    
+     for(int j=0;j<7;j++)
+    {  
+      printf("\n your step count of Day %d: %d steps ",j + 1, dailySteps[j]);
+    }
+    return 0;
+}
+2.Create a 2D array called playlistRatings to store ratings for 3 Spotify playlists over 5 days 
+(rows = playlists, columns = days). Fill it with sample numbers and print the ratings for the second playlist.
+#include <stdio.h>
+
+int main()
+{
+    int playlistRatings[3][5] =
+    {
+        {1, 5, 6, 7, 5},
+        {5, 4, 5, 3, 4},
+        {3, 4, 4, 5, 3}
+    };
+
+     printf("\n Ratings for the second playlist:");
+    
+    for(int i=0;i<5;i++)
+    {
+        printf("\n Day %d:%d", i+1,playlistRatings[1][i]);
+    }
+
+    return 0;
+}
+
+3.Build a function that takes a 1D array of 7 integers representing your daily Zomato order amounts and 
+calculates the average spend for the week.<br><br><em><strong>Hint:</strong> Use a loop to sum the values, 
+then divide by the array length.</em>
+
+#include<stdio.h>
+
+float Calculator(int a[])
+{
+    int i, sum=0;
+  
+   for(i=0;i<=7;i++)
+  {
+   sum=sum+a[i];
+  }
+ 
+  return (float)sum/7;
+
+ }
+
+int main()
+{
+    int amount[7];
+   
+    for(int i=0;i<7;i++)
+    {
+        printf("Enter amount for day %d: ", i + 1);
+        scanf("%d", &amount[i]);
+    }
+
+    printf("Average = %f", Calculator(amount));
+
+    return 0;
+}
+
+4.Given a 2D array called cricketScores where each row represents an IPL match and columns represent 
+ runs scored by each team, write code to print the highest score from each match.
+ #include <stdio.h>
+
+int main()
+{
+    int cricketScores[3][2] = 
+    {
+        {290, 190},
+        {139, 150},
+        {210, 175}
+    };
+
+    int i;
+
+    for(i=0;i<3;i++)
+    {
+        if(cricketScores[i][0]>cricketScores[i][1])
+            printf("\n Highest score in Match %d = %d", i+1, cricketScores[i][0]);
+        else
+            printf("\n Highest score in Match %d = %d", i + 1, cricketScores[i][1]);
+    }
+
+    return 0;
+}
+

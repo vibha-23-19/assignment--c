@@ -62,29 +62,37 @@ Use a do-while loop so the user can keep guessing until they get it right.
 4.Explain with your own example the difference between entry-controlled and exit-controlled loops by writing a short code snippet 
 for each (for/while vs do-while) and describing what happens if the loop condition is false at the start
  
-entry-controlled loop -> (for/while) checks the condition before running the loop body. 
+Entry-controlled loop -> (for/while) checks the condition before running the loop body. 
                          If the condition is false at the start, the body never executes at all.
+						 
+	#include <stdio.h>
 
-exit-controlled  loop -> (do-while)checks the condition after running the loop body. This guarantees the body runs at least once, 
-                          even if the condition is false from the very beginning.
+    int main() {
+    int a = 10; 
 
-#include <stdio.h>
-
-int main() {
-    int a = 5;
-
-    // Entry-controlled loop (while)
-    printf("While loop (entry-controlled):\n");
-    while (a < 5) {
-        printf("This will never print.\n");
+    while (a< 5) {
+        printf("%d\n", a);
+        a++;
     }
-    printf("Loop skipped because condition (x < 5) was false at start.\n\n");
+    printf("the loop never executed, not even once.\n");
+    return 0;
+}
+Explaination -> While loop skipped entirely because condition was false.
 
-    // Exit-controlled loop (do-while)
-    printf("Do-while loop (exit-controlled):\n");
+
+Exit-controlled  loop -> (do-while)checks the condition after running the loop body. This guarantees the body runs at least once, 
+                          even if the condition is false from the very beginning.
+  #include <stdio.h>
+
+  int main() {
+    int a = 10;
     do {
-        printf("This prints once, even though x < 5 is false.\n");
+        printf("%d\n", a);
+        a++;
     } while (a < 5);
+    printf("the loop still ran once before the condition was checked.\n");
 
     return 0;
 }
+Explaination ->  This prints exactly once, even though condition is false Do-while loop ran once before checking the condition.
+						 
