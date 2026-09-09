@@ -21,6 +21,8 @@
  
 3.Draw a flowchart (on paper or using any online tool) for the process of booking a movie ticket on BookMyShow, 
  starting from opening the app to receiving the booking confirmation.
+
+ https://github.com/vibha-23-19/assignment--c/blob/main/flowchart.docx
    
    start
      |
