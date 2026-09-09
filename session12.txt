@@ -110,9 +110,9 @@ int main()
 {
     struct InstaProfile profile =
     {
-        "BCA_student",
+       "gayatri_joshi",
         1000,
-        {"BCA Student", 23}
+        {"Gayatri", 21}
     };
 
     printf("Username    : %s\n", profile.username);

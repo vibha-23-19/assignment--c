@@ -1,5 +1,6 @@
 1.Declare an integer variable called likes and a pointer variable called ptrLikes; assign likes a value, 
   point ptrLikes to likes, and print both the value and the address stored in ptrLikes.
+  
   #include <stdio.h>
 
 int main()
@@ -17,6 +18,7 @@ int main()
 
 2.Write a function swapPlaylistCounts(int *a, int *b) that swaps the number of songs in two Spotify playlists using 
   pointers, then call the function in main and print the swapped values.
+  
   #include <stdio.h>
 
 void swapPlaylistCounts(int *a, int *b)
@@ -53,7 +55,7 @@ int main()
 
 int main()
 {
-    int orders[5] = {250, 180, 320, 150, 400};
+    int orders[5] = {200, 170, 350, 250, 500};
 
     int *pointer = orders;
 
@@ -97,8 +99,11 @@ int main()
 
     return 0;
 }
+
 5.Draw a simple memory diagram (on paper or using any drawing tool) showing how a pointer references the address 
   of a variable, using the variables from your likes and ptrLikes example; label the variable, pointer, and address.
+
+  https://github.com/vibha-23-19/assignment--c/blob/main/Memory%20Diagram.docx
   
     Variable -> Box that stores a value.
 	Pointer  -> Box that strores an address.

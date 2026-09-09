@@ -36,7 +36,7 @@
    #include <stdio.h>
 
     int main() {
-    char playlistname[50] = "Chill Vibes";
+    char playlistname[50] = "Gujarati song";
     int totalsongs = 30;
     float avgduration = 5.5;
 
