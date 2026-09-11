@@ -8,7 +8,7 @@
   int main()
  {
     char items[3][20] = {"Burger", "Pizza", "Fries"};
-    int prices[3] = {120, 250, 90};
+    int prices[3] = {230, 450, 100};
     int total = 0;
 
         for (int i = 0; i < 3; i++)
@@ -40,27 +40,26 @@ int isEven(int num)
 int main()
 {
     printf("%d\n", isEven(4));
-    printf("%d\n", isEven(5));
+    printf("%d\n", isEven(7));
 
     return 0;
 }
 
 3.Write a function formatFollowersCount(count) that takes a number and returns a formatted string like Instagram: 1500 as '1.5K', 
   1200000 as '1.2M', and numbers below 1000 as-is. Add clear comments and use proper indentation.
-  
   #include <stdio.h>
 
- void formatFollowersCount(int count)
- {
+void formatFollowersCount(float count)
+{
 
     if (count >= 1000000)
     {
-        printf("%.1fM\n", count / 1000000.0);
+        printf("%fM\n", count / 1000000.0);
     }
    
     else if (count >= 1000)
     {
-        printf("%.1fK\n", count / 1000.0);
+        printf("%fK\n", count / 1000.0);
     }
   
     else
@@ -77,6 +76,9 @@ int main()
 
     return 0;
 }
+
+  
+
 
 4.You are given a piece of JavaScript code that should print all even numbers from 1 to 10, but it doesn't work as expected:
   <br><br>for (let i = 1; i <= 10; i++) {<br> if (i % 2 = 0) {<br> console.log(i)<br> }<br>}<br><br>Find and fix the error, 

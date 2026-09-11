@@ -48,7 +48,7 @@ int main()
 
     file = fopen("playlist.txt", "a");
 
-    fprintf(file, "Valam Aavo Ne\n");
+    fprintf(file, "Vhalam Aavo Ne\n");
     fprintf(file, "Kesariya\n");
 
     fclose(file);
